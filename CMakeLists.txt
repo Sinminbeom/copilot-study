@@ -6,17 +6,17 @@ set(CMAKE_CXX_STANDARD 14)
 include_directories(include)
 
 # file(GLOB SOURCES "src/*.cpp")
-# add_executable(CopilotStudy ${SOURCES})
+# add_executable(copilot-study ${SOURCES})
 
-# add_executable(CopilotStudy "src/main.cpp")
+# add_executable(copilot-study "src/main.cpp")
 
 # file(GLOB SOURCES "test/*.cpp")
-# add_executable(CopilotStudy ${SOURCES})
+# add_executable(copilot-study ${SOURCES})
 
-# add_executable(CopilotStudy abstractFactoryPattern/test_CameraPropertyFactory.cpp)
-add_executable(copilot-study abstractFactoryPattern/CameraPropertyFactory.cpp)
+# add_executable(copilot-study abstractFactoryPattern/test_CameraPropertyFactory.cpp)
+add_executable(copilot-study abstractFactoryPattern/test_CameraPropertyFactory.cpp)
 
-# add_executable(CopilotStudy 
+# add_executable(copilot-study 
 #     src/test_Client.cpp 
 #     src/Subscriber.h
 #     src/User.cpp
@@ -25,7 +25,7 @@ add_executable(copilot-study abstractFactoryPattern/CameraPropertyFactory.cpp)
 #     src/ChatServer.h
 # )
 
-# add_executable(CopilotStudy 
+# add_executable(copilot-study 
 #     test/test_SensorFactory.cpp
 #     test/SensorFactory.cpp
 #     test/LidarFactory.cpp
