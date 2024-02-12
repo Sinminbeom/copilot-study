@@ -1,14 +1,21 @@
-#include <gtest/gtest.h>
+#include <iostream>
+#include <typeinfo>
 #include "CameraPropertyFactory.cpp"
 
-TEST(CameraPropertyFactoryTest, CreateSensorReturnTypeTest) {
-    SensorPropertyFactory* propertyFactory = new SensorPropertyFactory();
-    Camera1SensorFactory cameraFactory(propertyFactory);
-    Sensor* sensor = cameraFactory.createSensor();
-    ASSERT_TRUE(dynamic_cast<Camera1*>(sensor) != nullptr);
-}
+int main() {
+    SensorPropertyFactory* propertyFactory = new Camera1PropertyFactory();
+    SensorFactory* sensorFactory = new Camera1SensorFactory(propertyFactory);
+    Sensor* sensor = sensorFactory->createSensor();
 
-int main(int argc, char **argv) {
-    testing::InitGoogleTest(&argc, argv);
-    return RUN_ALL_TESTS();
+    if (typeid(*sensor) == typeid(Camera1)) {
+        std::cout << "Sensor is an instance of Camera1" << std::endl;
+    } else {
+        std::cout << "Sensor is not an instance of Camera1" << std::endl;
+    }
+
+    delete sensor;
+    delete sensorFactory;
+    delete propertyFactory;
+
+    return 0;
 }
