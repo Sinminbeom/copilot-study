@@ -14,7 +14,10 @@ include_directories(include)
 # add_executable(copilot-study ${SOURCES})
 
 # add_executable(copilot-study abstractFactoryPattern/test_CameraPropertyFactory.cpp)
-add_executable(copilot-study abstractFactoryPattern/test_CameraPropertyFactory.cpp)
+# add_executable(copilot-study abstractFactoryPattern/test_CameraPropertyFactory.cpp)
+# add_executable(copilot-study test/test.cpp)
+add_executable(copilot-study ObserverAndAbstractFactoryPattern/main.cpp)
+# add_executable(copilot-study ObserverAndAbstractFactoryPattern/test_main.cpp)
 
 # add_executable(copilot-study 
 #     src/test_Client.cpp 
